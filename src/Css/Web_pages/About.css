@@ -91,10 +91,10 @@
 }
 
 /* 1. Blue to Cyan Gradient */
-.btn1 {
+.banner_content .btn1 {
   background: linear-gradient(135deg, limegreen, green);
 }
-.btn1:hover {
+.banner_content .btn1:hover {
   background: linear-gradient(135deg, green, limegreen);
   transform: translateY(-3px);
 }

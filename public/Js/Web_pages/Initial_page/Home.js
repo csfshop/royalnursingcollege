@@ -159,19 +159,19 @@ const testimonials = [
                 quote: "I was nervous on day one, but the hands-on labs and caring instructors made me a confident, compassionate nurse.",
                 name: "Akosua Mensah",
                 designation: "Diploma in Nursing",
-                src:'images/gg_1.jpg',
+                src:`../../../images/gg_1.jpg`,
             },
             {
                 quote: "Instructors treated me like family, offering extra help and career advice whenever I needed it.",
                 name: "Yaa Badu",
                 designation: "Diploma in Medical Laboratory Tech",
-                src: "images/gg_2.jpg",
+                src: "../../../images/gg_2.jpg",
             },
             {
                 quote: "The up-to-date curriculum and clinical rotations had me fully prepared for my first hospital job.",
                 name: "Ama Serwaa",
                 designation: "Health Care Assistant",
-                src: "images/gg_3.jpg",
+                src: "../../../images/gg_2.jpg",
             },
         ];
 

@@ -242,9 +242,7 @@ function Home() {
                         Royal Nursing College has been a cornerstone of excellence in 
                         nursing education since its inception.
                         Originally founded to address the growing need for 
-                        skilled and compassionate nursing care, our institution 
-                        is rooted in a tradition of hands-on, evidence-based learning 
-                        that emphasizes both academic rigor and real-world clinical experience.
+                        skilled and compassionate nursing care. 
                     </p>
 
 
@@ -253,13 +251,7 @@ function Home() {
                         blend of rigorous academic programs and hands-on clinical experience.
                         Our mission is to empower aspiring nurses with the knowledge, skills,
                         and empathy required to excel in a dynamic medical landscape. 
-                        By integrating state-of-the-art simulation labs, 
-                        evidence-based coursework, and robust clinical partnerships, 
-                        we ensure that every graduate is well-prepared to meet modern 
-                        healthcare challenges head-on.
-                        Join us and be a part of a legacy that began over a decade ago—a 
-                        legacy built on a passion for quality care and the continuous pursuit 
-                        of excellence in nursing.
+                       
                     </p>
 
 
