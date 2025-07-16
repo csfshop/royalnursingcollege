@@ -1,3 +1,4 @@
+console.log('ok')
 let next = document.getElementById('next');
 let prev = document.getElementById('prev');
 let carousel = document.querySelector('.carousel');

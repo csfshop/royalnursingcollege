@@ -88,7 +88,7 @@
 
 .sidebar_div .nav_image h3{
     margin-left: 5px;
-    font-size: 20px;
+    font-size: 23px;
     font-weight: 700;
     padding-top: 3px;
     color: green;
@@ -119,7 +119,7 @@
   }
 
   .sidebar_div .sidebar_cloes_icon{
-    font-size: 27px;
+    font-size: 23px;
     font-weight: 800;
     margin-right: 5px;
     color: #c0392b;
@@ -247,10 +247,11 @@
 
   .sidebar_body{
     background-color: black;
-    position: absolute;
+    position:fixed;
+    top: 0;
     width: 100%;
-    height: 100%;
-    z-index: 1001;  
+    height: 100vh;
+    z-index: 1002;  
     opacity: 0.3;
     display: none;
   }

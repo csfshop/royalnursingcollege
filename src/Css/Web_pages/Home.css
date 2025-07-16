@@ -1,6 +1,6 @@
 .main_slider_sub{
     margin: 0;
-    background-color: #4f8b69;
+    background-color: white;
    
 }
 .main_slider_sub{
@@ -364,6 +364,11 @@ background-image: linear-gradient(315deg, #9dc5c3 0%, #5e5c5c 74%);
 
 .carousel .list .item .image{
     display: none;
+}
+
+
+.carousel .list::after{
+  background-color: white;
 }
 
 .carousel .list .item .main-content{

@@ -9,20 +9,17 @@ import '../../../Css/Web_pages/Desktop_nav.css'
 function Desktop_nav() {
     useEffect(()=>{
         const script = document.createElement('script')
-        script.src = '/Js/Web_pages/Initial_page/Desktop_nav.js'
+        script.src = `${process.env.PUBLIC_URL}/Js/Web_pages/Initial_page/Desktop_nav.js`
         script.async = true
-        script.onload = () => {
-            console.log("Script loaded successfully");
-          };
-          script.onerror = () => {
-            console.error("Error loading script");
-          };
+        script.onload = () => console.log('Script loaded successfully')
+        script.onerror = () => console.error('Error loading script:', script.src)
         document.body.appendChild(script)
-        return ()=>{
+
+        return () => {
             document.body.removeChild(script)
         }
 
-    },[])
+        },[])
   return (
     <div>
       {/* <div className="sub_top_nav" id="sub_top_nav">
@@ -52,11 +49,11 @@ function Desktop_nav() {
               </div>
             </li>
 
-             <li><NavLink to="5">FACULTY</NavLink>
+             <li><NavLink to="5">Addimision</NavLink>
               <div className="nav_sublink_1">
                 <div className='nav_sublink_ul'>
-                  <li>Faculty Details</li>
-                  <li>Registered Midwifery</li>
+                  <li>Applicants</li>
+                  <li>Accomodation</li>
                   
                 </div>
               </div>
@@ -67,7 +64,7 @@ function Desktop_nav() {
         
         <div className="button_div">
           
-            <Link to=''><button className='button_trial' >Apply Online</button></Link>
+            <Link to=''><button className='button_trial' >Apply Now</button></Link>
         </div>
          
       </nav>

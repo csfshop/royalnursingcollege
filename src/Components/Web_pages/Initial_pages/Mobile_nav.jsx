@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink,useNavigate } from 'react-router-dom'
 import { Company_name } from '../../../Js/Contants'
 import {web_images} from '../../../Images/Web_pages/Web_image'
 import '../../../Css/Web_pages/Mobile_nav.css'
@@ -14,20 +14,32 @@ function Mobile_nav() {
 
     useEffect(()=>{
         const script = document.createElement('script')
-        script.src = '/Js/Web_pages/Initial_page/Mobile_nav.js'
+        script.src = `${process.env.PUBLIC_URL}/Js/Web_pages/Initial_page/Mobile_nav.js`
         script.async = true
-        script.onload = () => {
-            console.log("Script loaded successfully");
-          };
-          script.onerror = () => {
-            console.error("Error loading script");
-          };
+        script.onload = () => console.log('Script loaded successfully')
+        script.onerror = () => console.error('Error loading script:', script.src)
         document.body.appendChild(script)
-        return ()=>{
+
+        return () => {
             document.body.removeChild(script)
         }
 
     },[])
+
+    const navigate = useNavigate()
+
+    const mobile_link_click = (path_way)=>(e)=>{
+        e.preventDefault()
+        const target_bar = document.getElementById("sidebar_div")
+        const target_over = document.getElementById("sidebar_blur")
+
+        target_bar.classList.remove('sidebar_active')
+        target_over.style.display = 'none'
+
+        navigate(path_way)
+        
+        
+    }
 
   
     return (
@@ -36,10 +48,14 @@ function Mobile_nav() {
         <div className='sidebar_body' id='sidebar_blur'></div>
         <div>
             <nav className="mobile_nav" id="mobile_nav">
+              <Link  to='/'>
                 <div className="logo">
+                 
                     <img src={web_images.logo} alt="" />
                     <h3><span>ROYAL</span> NURSING COLLEGE</h3>
+            
                 </div>
+              </Link>
                 
             
                 <div className="icon_div">
@@ -53,10 +69,12 @@ function Mobile_nav() {
         <div className="sidebar_div" >
             <nav className="sidebar " id='sidebar_div'>
                 <div className="logo_items flex">
-                    <span className="nav_image">
+                   <Link onClick={mobile_link_click('/')} >
+                     <span className="nav_image mobile_nav_link">
                         <img src={web_images.logo} alt="" />
                         <h3><span>ROYAL</span> NURSING COLLEGE</h3>
                     </span>
+                   </Link>
                     
                     <span>
                         <FontAwesomeIcon className='sidebar_cloes_icon' id='sidebar_close' icon={faCircleXmark}/>
@@ -68,13 +86,13 @@ function Mobile_nav() {
                         <div className="menu_item">
                            
                             <div className="item">
-                                <NavLink to="#" className="link flex">
+                                <NavLink onClick={mobile_link_click('/')}  className="link flex">
                                    <FontAwesomeIcon className='icon' icon={faHome}/>
                                     <span className='text'>Home</span>
                                 </NavLink>
                             </div>
                             <li className="item">
-                                <NavLink to="about/" className="link flex">
+                                <NavLink onClick={mobile_link_click('/about/')}  className="link flex">
                                    <FontAwesomeIcon className='icon' icon={faCircleInfo}/>
                                     <span className='text'>ABOUT</span>
                                 </NavLink>
@@ -86,11 +104,11 @@ function Mobile_nav() {
                                     <FontAwesomeIcon className='icon xtra right' icon = {subnav_1?faCaretDown:faCaretRight}/>
                                 </div>
                                 <div className={subnav_1?"sidebar_subnav subnav_active":"sidebar_subnav" }>
-                                    <li>Registered Midwifery</li>
-                                    <li>Diploma in Registered General Nursing</li>
-                                    <li>Diploma in Medical Laboratory Tech</li>
-                                    <li>Health Care and Assistant</li>
-                                    <li>Health Assistant Clinicals</li>
+                                    <li onClick={mobile_link_click('/')}>Registered Midwifery</li>
+                                    <li onClick={mobile_link_click('/')}>Diploma in Registered General Nursing</li>
+                                    <li onClick={mobile_link_click('/')}>Diploma in Medical Laboratory Tech</li>
+                                    <li onClick={mobile_link_click('/')}>Health Care and Assistant</li>
+                                    <li onClick={mobile_link_click('/')}>Health Assistant Clinicals</li>
                                 </div>
                             </div>
                            <div className="item list">
@@ -105,7 +123,7 @@ function Mobile_nav() {
                                 </div>
                             </div>
 
-                            <li className="item">
+                            <li onClick={mobile_link_click('/contact_us/')} className="item">
                                
                                 <div to="#" className="link flex">
                                    <FontAwesomeIcon className='icon' icon={faAddressCard}/>

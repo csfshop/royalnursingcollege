@@ -9,19 +9,17 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function Home() {
 
   useEffect(()=>{
-        const script = document.createElement('script')
-        script.src = '/Js/Web_pages/Initial_page/Home.js'
-        script.async = true
-        script.onload = () => {
-            console.log("Script loaded successfully");
-          };
-          script.onerror = () => {
-            console.error("Error loading script");
-          };
-        document.body.appendChild(script)
-        return ()=>{
-            document.body.removeChild(script)
-        }
+       
+    const script = document.createElement('script')
+    script.src = `${process.env.PUBLIC_URL}/Js/Web_pages/Initial_page/Home.js`
+    script.async = true
+    script.onload = () => console.log('Script loaded successfully')
+    script.onerror = () => console.error('Error loading script:', script.src)
+    document.body.appendChild(script)
+
+    return () => {
+        document.body.removeChild(script)
+    }
 
     },[])
 
@@ -49,16 +47,12 @@ function Home() {
                                 Welcome to <span>ROYAL NURSING COLLEGE</span>—a place where passion for 
                                 care meets excellence in education. Our institution offers 
                                 a dynamic curriculum that seamlessly integrates advanced 
-                                classroom theory with hands-on clinical training. With 
-                                state-of-the-art facilities and experienced faculty, we 
-                                empower our students to become proficient, compassionate 
-                                healthcare professionals ready to excel in today's dynamic 
-                                clinical environments.
+                                classroom theory with hands-on clinical training.
+                              
                             </p>
                             
                             <div className="button_div">
                                 <button className='button_trial' >Apply Now</button>
-                                <button className="button_extra">Get in Touch</button>
                             </div>
                         </div>
 
@@ -84,23 +78,18 @@ function Home() {
                              <h2>Our State-of-the-Art Facilities</h2>
                     
                             <p className="description">
-                                Our facility is a modern, state-of-the-art environment 
-                                designed to foster both academic excellence and hands-on
-                                 clinical training. Classrooms are equipped with digital
-                                  learning tools to support interactive, innovative 
-                                  instruction, while our advanced simulation labs allow 
-                                  students to practice real-world procedures using 
-                                  lifelike models and cutting-edge medical equipment.
-                                  Beyond these technical spaces, our well-appointed 
-                                  library, collaborative study areas, and comfortable
-                                   lounges create an ideal atmosphere for focused 
-                                   learning and teamwork. 
+                                
+                                Our campus features realistic simulation labs with high-fidelity manikins, 
+                                 advanced anatomy and skills suites, and a digital learning commons. 
+                                 Complemented by a wellness lounge and 24/7 resource center, 
+                                 these spaces immerse you in a professional environment that readies 
+                                 you for modern healthcare.
                                   
                             </p>
                             
                             <div className="button_div">
                                 <button className='button_trial' >Apply Now</button>
-                                <button className="button_extra">Get in Touch</button>
+                                
                             </div>
                         </div>
                     </div>
@@ -129,16 +118,13 @@ function Home() {
                                 simulation labs and clinical placements, students 
                                 engage in activities that build essential skills—from 
                                 patient assessments to emergency procedures. 
-                                These immersive experiences are carefully designed 
-                                to foster critical thinking, seamless teamwork, 
-                                and the confidence needed to excel in dynamic 
-                                healthcare environments.
+                                
                                   
                             </p>
                             
                             <div className="button_div">
                                 <button className='button_trial' >Apply Now</button>
-                                <button className="button_extra">Get in Touch</button>
+                               
                             </div>
                         </div>
                     </div>
@@ -165,19 +151,17 @@ function Home() {
                             <h2>Our Expert Educators</h2>
                     
                              <p className="description">
-                               Our distinguished team of educators brings a 
-                               wealth of clinical experience and academic excellence
-                                to every classroom. They are experienced professionals
-                                 dedicated to bridging theoretical knowledge 
-                                 with real-world practice, ensuring students not only 
-                                 learn nursing concepts but also master the practical 
-                                 skills essential in today’s healthcare environments.
+                              Our faculty combines accomplished clinicians and 
+                              pioneering researchers, each bringing real-world expertise 
+                              to the classroom and lab. With personalized mentorship and 
+                              evidence-based instruction, they sharpen your clinical judgment 
+                              and professional confidence from day one.
                                   
                             </p>
                             
                             <div className="button_div">
                                 <button className='button_trial' >Apply Now</button>
-                                <button className="button_extra">Get in Touch</button>
+                                
                             </div>
                         </div>
                     </div>

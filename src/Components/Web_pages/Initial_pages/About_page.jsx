@@ -13,18 +13,15 @@ function About_page() {
 
      useEffect(()=>{
         const script = document.createElement('script')
-        script.src = '/Js/Web_pages/Initial_page/About.js'
+        script.src = `${process.env.PUBLIC_URL}/Js/Web_pages/Initial_page/About.js`
         script.async = true
-        script.onload = () => {
-            console.log("Script loaded successfully");
-          };
-          script.onerror = () => {
-            console.error("Error loading script");
-          };
+        script.onload = () => console.log('Script loaded successfully')
+        script.onerror = () => console.error('Error loading script:', script.src)
         document.body.appendChild(script)
-        return ()=>{
+
+        return () => {
             document.body.removeChild(script)
-        }
+        } 
 
     },[])
 
