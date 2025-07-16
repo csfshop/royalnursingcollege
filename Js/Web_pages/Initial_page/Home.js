@@ -171,7 +171,7 @@ const testimonials = [
                 quote: "The up-to-date curriculum and clinical rotations had me fully prepared for my first hospital job.",
                 name: "Ama Serwaa",
                 designation: "Health Care Assistant",
-                src: "../../../images/gg_2.jpg",
+                src: "../../../images/gg_3.jpg",
             },
         ];
 
