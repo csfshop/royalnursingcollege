@@ -1,6 +1,6 @@
 
 // zoom in intersection
-console.log('heel tran')
+
 const all_zoom_hidden = document.querySelectorAll('.zoom_hidden')
 
 const zoomInObserver = new IntersectionObserver((entries, observer) => {
@@ -58,26 +58,48 @@ all_rotate_hidden.forEach((el)=>{
 
 // bounce y in intersection
 
-const all_bounce_hidden = document.querySelectorAll('.bounce_hidden')
+// ;(
+//   function observe_all_bounce(){
+    
+//   }
+// )();
 
-const bounceInObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
+;(
+  function observe_all_bounce(){
 
-      if (entry.isIntersecting) {
-        entry.target.classList.add('bounce_show')
-        
-        
-      }else{
-        entry.target.classList.remove('bounce_show')
+    const all_bounce_hidden = document.querySelectorAll('.bounce_hidden')
+
+    if (!all_bounce_hidden.length){
+      console.log('re runing')
+      setTimeout(observe_all_bounce,50);
+      
+
+    }
+    console.log('done with buonce')
+    const bounceInObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+
+          if (entry.isIntersecting) {
+            entry.target.classList.add('bounce_show')
+            
+            
+          }else{
+            entry.target.classList.remove('bounce_show')
+          }
+        });
+      }, {
+        threshold: 0.1   // fire when 10% of the element is visible
+      });
+
+    all_bounce_hidden.forEach((el)=>{
+        bounceInObserver.observe(el)
+    })
+
+
       }
-    });
-  }, {
-    threshold: 0.1   // fire when 10% of the element is visible
-  });
+)();
 
-all_bounce_hidden.forEach((el)=>{
-    bounceInObserver.observe(el)
-})
+
 
 // end bounce
 
