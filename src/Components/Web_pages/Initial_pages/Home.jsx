@@ -4,10 +4,11 @@ import { web_images } from '../../../Images/Web_pages/Web_image'
 import { Company_name } from '../../../Js/Contants'
 import {faCaretRight,faCaretLeft,faEye,faEyeSlash} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {  useNavigate } from 'react-router-dom';
 
 
 function Home() {
-
+    
   useEffect(()=>{
        
     const script = document.createElement('script')
@@ -22,6 +23,13 @@ function Home() {
     }
 
     },[])
+
+    const navigate = useNavigate()
+
+
+    const  navigate_path_btn = (path_way) =>{
+        navigate(path_way)
+    }
 
   return (
   <div className='main_home'>
@@ -51,8 +59,8 @@ function Home() {
                               
                             </p>
                             
-                            <div className="button_div">
-                                <button className='button_trial' >Apply Now</button>
+                            <div  className="button_div">
+                                <button onClick = {()=> navigate_path_btn('/contact-us/')} className='button_trial' >Apply Now</button>
                             </div>
                         </div>
 
@@ -88,7 +96,7 @@ function Home() {
                             </p>
                             
                             <div className="button_div">
-                                <button className='button_trial' >Apply Now</button>
+                                <button onClick = {()=> navigate_path_btn('/contact-us/')}  className='button_trial' >Apply Now</button>
                                 
                             </div>
                         </div>
@@ -123,7 +131,7 @@ function Home() {
                             </p>
                             
                             <div className="button_div">
-                                <button className='button_trial' >Apply Now</button>
+                                <button onClick = {()=> navigate_path_btn('/contact-us/')}  className='button_trial' >Apply Now</button>
                                
                             </div>
                         </div>
@@ -160,7 +168,7 @@ function Home() {
                             </p>
                             
                             <div className="button_div">
-                                <button className='button_trial' >Apply Now</button>
+                                <button onClick = {()=> navigate_path_btn('/contact-us/')}  className='button_trial' >Apply Now</button>
                                 
                             </div>
                         </div>
@@ -228,15 +236,15 @@ function Home() {
 
     <div className="summary">
         <div className="subdiv">
-               <div className="sry_content">
+            <div className="sry_content">
            
 
-            <h1 className="linear-wipe">
+            <h1 className="linear-wipe ">
                 Greetings From ROYAL NURSING COLLEGE
             </h1>
 
             <div className="detail">
-                    <p> 
+                    <p className="zoom_hidden"> 
                         Established in 2005 by a dedicated group of 
                         visionary healthcare professionals and community leaders, 
                         Royal Nursing College has been a cornerstone of excellence in 
@@ -246,7 +254,7 @@ function Home() {
                     </p>
 
 
-                      <p>
+                      <p className="zoom_hidden">
                         We are dedicated to nurturing excellence in healthcare through a 
                         blend of rigorous academic programs and hands-on clinical experience.
                         Our mission is to empower aspiring nurses with the knowledge, skills,
@@ -258,47 +266,51 @@ function Home() {
                 
             </div>
 
-        </div>
-        <div className="sry_conts">
-            
-            <div className="wrapper">
-                <div className="container">
-                    <div className="row">
-                    <div className="card">
-                        <div className="info">
-                        <div className="sub">Mission Statement</div>
-                        <div className="title">
-                        Royal Nursing College shares its mission with other nursing training colleges'
-                            world wide a commitment to the provision of quality health care service to all persoons.
-                            It aspires to be a community characterized by free inquiry,dicipline,God fearing and academic integrity.
-                            This will be achieved through the provision of academically rigorious,culturally and contextually
-                            relevant academic programs which will train students for moral uprightness,professional excellence,and responsible global citizenship.
-                        </div>
-                        <button className="btn">Reach Out</button>
-                        </div>
-                        
-                    </div>
-                    <div className="card">
-                        <div className="info">
-                        <div className="sub">Vision Statement</div>
-                        <div className="title">
-                            Royal Nursing College aspires to be a private health professional training colleges
-                            which will be recognized for innovation and quality in teaching and learning. The
-                            college has plans to provide nurses to take care of the healtcare needs of all categories
-                            of people. The college's ideal graduates will be highly competent in their chosen
-                            fields,ethical in their behavior, with a developed critical habit of mind,an  appreciation 
-                            of the sacred in life,and zeal habit to serving the common good of all.
-                        </div>
-                        <button className="btn">Get in Touch</button>
-                        </div>
-                        
-                    </div>
-                    </div>
-                
-                </div>
             </div>
+            <div className="sry_conts">
+                
+                <div className="wrapper">
+                    <div className="container">
+                        <div className="row">
+                        <div className="card bounce_hidden">
+                            <div className="info">
+                            <div className="sub">Mission Statement</div>
+                            <div className="title">
+                               <p>
+                                 Royal Nursing College shares its mission with other nursing training colleges'
+                                world wide a commitment to the provision of quality health care service to all persoons.
+                                It aspires to be a community characterized by free inquiry,dicipline,God fearing and academic integrity.
+                                This will be achieved through the provision of academically rigorious,culturally and contextually
+                                relevant academic programs which will train students for moral uprightness,professional excellence,and responsible global citizenship.
+                               </p>
+                            </div>
+                            <button onClick = {()=> navigate_path_btn('/contact-us/')}  className="btn">Reach Out</button>
+                            </div>
+                            
+                        </div>
+                        <div className="card bounce_hidden">
+                            <div className="info">
+                            <div className="sub">Vision Statement</div>
+                            <div className="title">
+                               <p>
+                                 Royal Nursing College aspires to be a private health professional training colleges
+                                which will be recognized for innovation and quality in teaching and learning. The
+                                college has plans to provide nurses to take care of the healtcare needs of all categories
+                                of people. The college's ideal graduates will be highly competent in their chosen
+                                fields,ethical in their behavior, with a developed critical habit of mind,an  appreciation 
+                                of the sacred in life,and zeal habit to serving the common good of all.
+                               </p>
+                            </div>
+                            <button onClick = {()=> navigate_path_btn('/contact-us/')}  className="btn">Get in Touch</button>
+                            </div>
+                            
+                        </div>
+                        </div>
+                    
+                    </div>
+                </div>
 
-        </div>
+            </div>
         </div>
     </div>
 
@@ -314,7 +326,7 @@ function Home() {
                     <h1>Explore Our Programmes</h1>
                     <hr className="divider" />;
                 </div>
-                <div className="mj_programs">
+                <div className="mj_programs slide_bottom_hidden">
                     <div className="cards">
 
                             <input type="radio" id="radio-1" name="radio-card" defaultChecked/>
@@ -438,11 +450,9 @@ function Home() {
 
             {/* number counts */}
 
-            <div className="home_counts_div">
+            <div className="home_counts_div slide_bottom_hidden">
             <div class="container">
         
-                
-                    
                     <div class="counters">
                         
                         <div class="counter customer">
@@ -473,7 +483,7 @@ function Home() {
             <section>
 
                 {/* first home message */}
-                <div className="first_message_div">
+                <div className="first_message_div zoom_hidden">
                     <div className="first_home_message">
                         <h1>Your Journey Begins Here</h1>
 
@@ -540,7 +550,7 @@ function Home() {
 
                 <div className="home_why_second">
                     <section>
-                        <div class="card green">
+                        <div class="card green rotate_hidden">
                             <div class="card-header">
                                 <div class="date">
                                     Academic Excellence
@@ -555,14 +565,14 @@ function Home() {
                             </div>
                            
                         </div>
-                        <div class="card orange">
+                        <div class="card orange rotate_hidden">
                             <div class="card-header">
                                 <div class="date">
                                     Innovative Learning
                                 </div>
                            
                             </div>
-                            <div class="card-body">
+                            <div class="card-body ">
                                 <h3>Embracing Forward-thinking Methods </h3>
                                 <p>
                                     We integrate simulation labs, digital tools, 
@@ -575,7 +585,7 @@ function Home() {
                             </div>
                            
                         </div>
-                         <div class="card red">
+                         <div class="card red rotate_hidden">
                             <div class="card-header">
                                 <div class="date">
                                     Career Opportunities
@@ -594,7 +604,7 @@ function Home() {
                             </div>
                            
                         </div>
-                        <div class="card blue">
+                        <div class="card blue rotate_hidden">
                             <div class="card-header">
                                 <div class="date">
                                     Diverse Community
@@ -640,7 +650,7 @@ function Home() {
 
             <div class="card_Container">
 
-                <div class="card">
+                <div class="card slide_bottom_hidden" >
 
                     <div class="imbBx">
                         <img src={web_images.ms_1} alt=""/>
@@ -655,7 +665,7 @@ function Home() {
 
                 </div>
 
-                <div class="card">
+                <div class="card slide_bottom_hidden">
 
                     <div class="imbBx">
                         <img src={web_images.ms_1} alt=""/>
@@ -670,7 +680,7 @@ function Home() {
 
                 </div>
 
-                <div class="card">
+                <div class="card slide_bottom_hidden">
 
                     <div class="imbBx">
                         <img src={web_images.ms_1} alt=""/>
@@ -685,7 +695,7 @@ function Home() {
 
                 </div>
 
-                <div class="card">
+                <div class="card slide_bottom_hidden">
 
                     <div class="imbBx">
                         <img src={web_images.ms_1} alt=""/>
@@ -717,50 +727,58 @@ function Home() {
                     </div>
                     <div className="home_image_gallery">
                         <main class="page">
-                            <section class="container">
+                            <section class="contain">
                             
                             
                                 
                                 <section class="gallery">
-                                    <figure class="gallery__item"><img class="gallery__image" src={web_images.gg_3} alt="A tent in the snowy mountains"/>
+                                    <figure class="gallery__item"><img class="gallery__image" data-index="0" src={web_images.gg_3} alt="A tent in the snowy mountains"/>
                                         <figcaption class="gallery__image__caption">A tent in the snowy mountains</figcaption>
                                     </figure>
-                                    <figure class="gallery__item"><img class="gallery__image" src={web_images.gg_1} alt="A river between the mountains"/>
+                                    <figure class="gallery__item"><img class="gallery__image" data-index="1" src={web_images.gg_1} alt="A river between the mountains"/>
                                         <figcaption class="gallery__image__caption">A river between the mountains</figcaption>
                                     </figure>
-                                    <figure class="gallery__item"><img class="gallery__image" src={web_images.gg_2} alt="A river between the mountains"/>
+                                    <figure class="gallery__item"><img data-index="2" class="gallery__image" src={web_images.gg_2} alt="A river between the mountains"/>
                                         <figcaption class="gallery__image__caption">Rocky mountains</figcaption>
                                     </figure>
-                                    <figure class="gallery__item"><img class="gallery__image" src={web_images.gg_4} alt="Trains in a deposit"/>
+                                    <figure class="gallery__item"><img data-index="3" class="gallery__image" src={web_images.gg_4} alt="Trains in a deposit"/>
                                         <figcaption class="gallery__image__caption">Trains in a deposit</figcaption>
                                     </figure>
-                                    <figure class="gallery__item"><img class="gallery__image" src={web_images.gg_5} alt="Greeny mountains"/>
+                                    <figure class="gallery__item"><img data-index="4" class="gallery__image" src={web_images.gg_5} alt="Greeny mountains"/>
                                         <figcaption class="gallery__image__caption">Greeny mountains</figcaption>
                                     </figure>
-                                    <figure class="gallery__item"><img class="gallery__image" src={web_images.gg_6} alt="Storm in the sea"/>
+                                    <figure class="gallery__item"><img data-index="5" class="gallery__image" src={web_images.gg_6} alt="Storm in the sea"/>
                                         <figcaption class="gallery__image__caption">Storm in the sea</figcaption>
                                     </figure>
-                                    <figure class="gallery__item"><img class="gallery__image" src={web_images.gg_7} alt="Fog in a valley of trees"/>
+                                    <figure class="gallery__item"><img data-index="6" class="gallery__image" src={web_images.gg_7} alt="Fog in a valley of trees"/>
                                         <figcaption class="gallery__image__caption">Fog in a valley of trees</figcaption>
                                     </figure>
-                                    <figure class="gallery__item"><img class="gallery__image" src={web_images.gg_8} alt="Flying like a bird of prey"/>
+                                    <figure class="gallery__item"><img data-index="7" class="gallery__image" src={web_images.gg_8} alt="Flying like a bird of prey"/>
                                         <figcaption class="gallery__image__caption">Flying like a bird of prey</figcaption>
                                     </figure>
-                                    <figure class="gallery__item"><img class="gallery__image" src={web_images.gg_9} alt="A woman and a dog looking at a foggy valley"/>
+                                    <figure class="gallery__item"><img data-index="8" class="gallery__image" src={web_images.gg_9} alt="A woman and a dog looking at a foggy valley"/>
                                         <figcaption class="gallery__image__caption">A woman and a dog looking at a foggy valley</figcaption>
                                     </figure>
-                                    <figure class="gallery__item"><img class="gallery__image" src={web_images.gg_10} alt="Sea waves"/>
+                                    <figure class="gallery__item"><img data-index="9" class="gallery__image" src={web_images.gg_10} alt="Sea waves"/>
                                         <figcaption class="gallery__image__caption">Sea waves</figcaption>
                                     </figure>
-                                    <figure class="gallery__item"><img class="gallery__image" src={web_images.gg_11} alt="Rocky cliffs"/>
+                                    <figure class="gallery__item"><img data-index="10" class="gallery__image" src={web_images.gg_11} alt="Rocky cliffs"/>
                                         <figcaption class="gallery__image__caption">Rocky cliffs</figcaption>
                                     </figure>
-                                    <figure class="gallery__item"><img class="gallery__image" src={web_images.gg_12}alt="Mountains seens through a forest"/>
+                                    <figure class="gallery__item"><img data-index="11" class="gallery__image" src={web_images.gg_12}alt="Mountains seens through a forest"/>
                                         <figcaption class="gallery__image__caption">Mountains seens through a forest</figcaption>
                                     </figure>
                                 </section>
                             </section>
                         </main>
+                    </div>
+
+                   
+                    <div id="lightbox" class="lightbox hidden">
+                        <span class="close">&times;</span>
+                        <img class="lightbox-img" src="" alt=""/>
+                        <button class="nav prev"> <FontAwesomeIcon   className='light_icon' icon = {faCaretLeft}/></button>
+                        <button class="nav next"> <FontAwesomeIcon   className='light_icon' icon = {faCaretRight}/></button>
                     </div>
 
 
