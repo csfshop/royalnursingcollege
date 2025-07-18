@@ -264,135 +264,57 @@ const testimonials = [
 
 
 // image gallery
-// Floating caption
-const imgContent = document.querySelectorAll(".gallery__image__caption");
-var x, y;
 
-function showImgContent(e) {
-    for (var i = 0; i < imgContent.length; i++) {
-        x = e.pageX;
-        y = e.pageY;
-        imgContent[i].style.transform = `translate(${x}px, ${y}px)`;
+  console.log('got it')
+  const thumbs = document.querySelectorAll('.gallery__image');
+  const lightbox = document.getElementById('lightbox');
+  const lbImg = lightbox.querySelector('.lightbox-img');
+  const closeBtn = lightbox.querySelector('.close');
+  const prevBtn  = lightbox.querySelector('.prev');
+  const nextBtn  = lightbox.querySelector('.next');
+
+  let currentIndex = 0;
+  const srcList = Array.from(thumbs).map(img => img.src);
+
+  function showLightbox(idx) {
+    currentIndex = idx;
+    lbImg.src = srcList[currentIndex];
+    lightbox.classList.remove('hidden');
+  }
+
+  function closeLightbox() {
+    lightbox.classList.add('hidden');
+  }
+
+  function showPrev() {
+    showLightbox((currentIndex - 1 + srcList.length) % srcList.length);
+  }
+
+  function showNext() {
+    showLightbox((currentIndex + 1) % srcList.length);
+  }
+
+  // Thumbnail click → open modal
+  thumbs.forEach(img => {
+    img.onclick = (e)=>{
+       console.log('img ckifs sf')
+      showLightbox(Number(e.currentTarget.dataset.index));
     }
-}
 
-document.addEventListener("mousemove", showImgContent);
+  })
 
-// Lightbox modal
-const body = document.body;
-const item_s = document.querySelectorAll(".gallery__item");
-const modal = document.createElement("section");
-const modalImg = document.createElement("img");
-const modalPrev = createButton(prevItem);
-const modalNext = createButton(nextItem);
-const modalClose = createButton(closeModal);
-let currentItem = 0;
-let modalInstance;
+  // Close and nav handlers
+  closeBtn.addEventListener('click', closeLightbox);
+  prevBtn.addEventListener('click', showPrev);
+  nextBtn.addEventListener('click', showNext);
 
-modal.classList.add("gallery__modal");
-modalPrev.classList.add("gallery__navigation--prev");
-modalNext.classList.add("gallery__navigation--next");
-modalClose.classList.add("gallery__navigation--close");
-
-function createButton(action) {
-    const button = document.createElement("button");
-    button.addEventListener("click", action);
-    return button;
-}
-
-function prevItem() {
-    currentItem = (currentItem - 1 + item_s.length) % item_s.length;
-    showModal();
-}
-
-function nextItem() {
-    currentItem = (currentItem + 1) % item_s.length;
-    showModal();
-}
-
-function closeModal() {
-    modal.remove();
-}
-
-function showModal() {
-    modalImg.image = item_s[currentItem].querySelector("img");
-    modalImg.src = modalImg.image.src;
-    modalImg.alt = modalImg.image.alt;
-    modal.append(modalImg, modalPrev, modalNext, modalClose);
-    document.body.appendChild(modal);
-}
-
-item_s.forEach(function (image) {
-    image.addEventListener(
-        "click",
-        function () {
-            /* Detect the image class name */
-            var overlayOpen = this.className === "gallery__item";
-
-            /**
-             * Storing a reference to the opening image
-             */
-            if (overlayOpen) {
-                modalInstance = this;
-            }
-
-            /**
-             * Toggle the aria-hidden state on the overlay and the
-             * no-scroll class on the body
-             */
-            modal.setAttribute("aria-hidden", !overlayOpen);
-            body.classList.toggle("noscroll", overlayOpen);
-
-            /**
-             * Run the function that creates the modal content
-             * and that appends it to the body
-             */
-            showModal();
-
-            /**
-             * On some mobile browser when the overlay was previously
-             * opened and scrolled, if you open it again it doesn't
-             * reset its scrollTop property
-             */
-            modal.scrollTop = 0;
-
-            /**
-             * Forcing focus for Assistive technologies.
-             * Note that:
-             * - if the modal has just a phrase and a button move the
-             *   focus on the button,
-             * - if the modal has a long text inside (e.g. a privacy
-             *   statement) move the focus on the first heading inside
-             *   the modal,
-             * - otherwise just focus the modal.
-             *
-             * When you close the overlay restore the focus on the
-             * button that opened the modal.
-             */
-            if (overlayOpen) {
-                modal.focus();
-            } else {
-                modalInstance.focus();
-                modalInstance = null;
-            }
-        },
-        false
-    );
-});
-
-/**
- * Attach class `noscroll` to the body to prevent background scrolling
- * and set `aria` attributes for accessible devices
- */
-document.body.addEventListener("keyup", (ev) => {
-    if (ev.key === "Escape" && modal.getAttribute("aria-hidden") === "false") {
-        modal.setAttribute("aria-hidden", "true");
-        body.classList.toggle("noscroll", false);
-        modalInstance.focus();
-        modalInstance = null;
-    }
-});
-
+  // Keyboard navigation
+  document.addEventListener('keydown', e => {
+    if (lightbox.classList.contains('hidden')) return;
+    if (e.key === 'ArrowLeft')  showPrev();
+    if (e.key === 'ArrowRight') showNext();
+    if (e.key === 'Escape')      closeLightbox();
+  });
 
 
 // end image gallery
@@ -438,7 +360,6 @@ document.body.addEventListener("keyup", (ev) => {
 
 
 // end faq home
-
 
 
 
