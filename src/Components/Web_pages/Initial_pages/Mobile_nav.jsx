@@ -3,7 +3,7 @@ import { Link, NavLink,useNavigate } from 'react-router-dom'
 import { Company_name } from '../../../Js/Contants'
 import {web_images} from '../../../Images/Web_pages/Web_image'
 import '../../../Css/Web_pages/Mobile_nav.css'
-import {faBars,faHome,faCircleXmark,faCircleInfo,faList,faBuilding,faAddressCard,faCaretRight,faCaretDown} from "@fortawesome/free-solid-svg-icons";
+import {faBars,faHome,faCircleXmark,faCircleInfo,faList,faBuilding,faAddressCard,faCaretRight,faPlus,faSubtract} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
@@ -101,7 +101,7 @@ function Mobile_nav() {
                                 <div onClick={()=> setSubnav_1(!subnav_1)} to="#" id='sidebar_subnav_div' className="link flex">
                                    <FontAwesomeIcon className='icon' icon={faList}/>
                                     <span className='text'>COURSES</span>
-                                    <FontAwesomeIcon className='icon xtra right' icon = {subnav_1?faCaretDown:faCaretRight}/>
+                                    <FontAwesomeIcon className='icon xtra right' icon = {subnav_1?faSubtract:faPlus}/>
                                 </div>
                                 <div className={subnav_1?"sidebar_subnav subnav_active":"sidebar_subnav" }>
                                     <li onClick={mobile_link_click('/')}>Registered Midwifery</li>
@@ -114,16 +114,16 @@ function Mobile_nav() {
                            <div className="item list">
                                 <div onClick={()=> setSubnav_2(!subnav_2)} to="#" id='sidebar_subnav_div' className="link flex">
                                    <FontAwesomeIcon className='icon' icon={faBuilding}/>
-                                    <span className='text'>Faculty</span>
-                                    <FontAwesomeIcon className='icon xtra right' icon = {subnav_2?faCaretDown:faCaretRight}/>
+                                    <span className='text'>Adimission</span>
+                                    <FontAwesomeIcon className='icon xtra right' icon = {subnav_2?faSubtract:faPlus}/>
                                 </div>
                                 <div className={subnav_2?"sidebar_subnav subnav_active":"sidebar_subnav" }>
-                                   <li>Faculty Details</li>
-                                    <li>Registered Midwifery</li>
+                                   <li>Applicants</li>
+                                    <li>Accomodation</li>
                                 </div>
                             </div>
 
-                            <li onClick={mobile_link_click('/contact_us/')} className="item">
+                            <li onClick={mobile_link_click('/contact-us/')} className="item">
                                
                                 <div to="#" className="link flex">
                                    <FontAwesomeIcon className='icon' icon={faAddressCard}/>
@@ -133,7 +133,7 @@ function Mobile_nav() {
 
                             <div className="button_div">
                                 {/* <button className='button_login' >Login</button> */}
-                                <button className='button_trial' >Apply Now</button>
+                                <button onClick={mobile_link_click('/contact-us/')} className='button_trial' >Apply Now</button>
                             </div>
                           
                         </div>

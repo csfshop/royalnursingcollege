@@ -1,7 +1,9 @@
 import React from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink,useNavigate } from 'react-router-dom'
 import { Company_name } from '../../../Js/Contants'
 import {web_images} from '../../../Images/Web_pages/Web_image'
+import {FaFacebookF,FaYoutube,FaInstagram,FaTiktok} from "react-icons/fa";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import '../../../Css/Web_pages/Footer.css'
 
 function footer() {
@@ -24,15 +26,25 @@ function footer() {
             <li className="sub_li">
              <h3>Affiliated to university of Cape Coast</h3>
             </li>
+            <li>
+              <h1>FOLLOW US ON:</h1>
+              <div className="sm">
+                <Link to='/'  class="link fb"><span className='menu_icon'><FaFacebookF /></span></Link>
+                <Link to='/' class="link yt"><span className='menu_icon'><FaYoutube /></span></Link>
+                <Link to='/' class="link ig"><span className='menu_icon'><FaInstagram /></span></Link>
+                <Link to='/' class="link git"><span className='menu_icon'><FaTiktok /></span></Link>
+              </div>
+            </li>
          
           </ul>
 
           <ul class="box">
             <li class="link_name">LINKS</li>
-            <Link><li className="links">Home</li></Link>
-             <Link><li className="links">About</li></Link>
-              <Link><li className="links">Faculty</li></Link>
-               <Link><li className="links">Contact Us</li></Link>
+            <Link to='/'><li className="links">Home</li></Link>
+             <Link to='/about/'><li className="links">About</li></Link>
+              <Link ><li className="links">Applicants</li></Link>
+                <Link ><li className="links">Accomodation</li></Link>
+               <Link to='/contact-us/'><li className="links">Contact Us</li></Link>
           </ul>
         
          

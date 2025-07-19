@@ -1447,7 +1447,7 @@ background-image: linear-gradient(315deg, #9dc5c3 0%, #5e5c5c 74%);
 
 @media screen and (max-width: 699px){
 .main_mj_div{
-margin-bottom: 20px;
+margin-bottom: 0px;
 }
  
 .main_mj_div .mj_heading hr{
@@ -1623,7 +1623,7 @@ margin-bottom: 20px;
   .home_counts_div .container {
   
     margin-bottom: 30px;
-    margin-top: -40px;
+
   
 }
 

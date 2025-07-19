@@ -49,7 +49,7 @@ function Desktop_nav() {
               </div>
             </li>
 
-             <li><NavLink to="5">Addimision</NavLink>
+             <li><NavLink to="5">Adimision</NavLink>
               <div className="nav_sublink_1">
                 <div className='nav_sublink_ul'>
                   <li>Applicants</li>

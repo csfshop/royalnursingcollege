@@ -3,6 +3,7 @@ import { Route,Routes } from 'react-router-dom'
 import {Nav_bar,Home,About_page,Footer,Contact_page}  from  '../../Components/Web_pages/Initial_pages/All_pages'
 import '../../Css/Web_pages/Web_routes.css'
 import '../../Css/Web_pages/Transition.css'
+import Not_found from '../Web_pages/Initial_pages/Not_found'
 
 function Web_routers() {
    
@@ -34,6 +35,7 @@ function Web_routers() {
             <Route path='/' element={<Home/>}/>
             <Route path='about/' element={<About_page/>}/>
              <Route path='contact-us/' element={<Contact_page/>}/>
+              <Route path='*' element={<Not_found/>}/>
         </Routes>
         
      </div>
