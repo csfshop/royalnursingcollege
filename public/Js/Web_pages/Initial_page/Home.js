@@ -1,4 +1,6 @@
-console.log('ok')
+
+
+
 let next = document.getElementById('next');
 let prev = document.getElementById('prev');
 let carousel = document.querySelector('.carousel');
@@ -151,29 +153,34 @@ function home_count_fn(){
 
 
 // testimonials
+//  window.PUBLIC_URL = '%PUBLIC_URL%';
 
 
 
 const testimonials = [
-            {
-                quote: "I was nervous on day one, but the hands-on labs and caring instructors made me a confident, compassionate nurse.",
-                name: "Akosua Mensah",
-                designation: "Diploma in Nursing",
-                src:`../../images/gg_1.jpg`,
-            },
-            {
-                quote: "Instructors treated me like family, offering extra help and career advice whenever I needed it.",
-                name: "Yaa Badu",
-                designation: "Diploma in Medical Laboratory Tech",
-                src: "../../images/gg_2.jpg",
-            },
-            {
-                quote: "The up-to-date curriculum and clinical rotations had me fully prepared for my first hospital job.",
-                name: "Ama Serwaa",
-                designation: "Health Care Assistant",
-                src: "../../images/gg_3.jpg",
-            },
-        ];
+        {
+            quote: "I was nervous on day one, but the hands-on labs and caring instructors made me a confident, compassionate nurse.",
+            name: "Akosua Mensah",
+            designation: "Diploma in Nursing",
+            src:'',
+        },
+        {
+            quote: "Instructors treated me like family, offering extra help and career advice whenever I needed it.",
+            name: "Yaa Badu",
+            designation: "Diploma in Medical Laboratory Tech",
+            src: "",
+        },
+        {
+            quote: "The up-to-date curriculum and clinical rotations had me fully prepared for my first hospital job.",
+            name: "Ama Serwaa",
+            designation: "Health Care Assistant",
+            src: "",
+        },
+    ];
+
+
+
+
 
         let activeIndex = 0;
         const imageContainer = document.getElementById('image-container');
@@ -188,6 +195,7 @@ const testimonials = [
             activeIndex = (activeIndex + direction + testimonials.length) % testimonials.length;
 
             testimonials.forEach((testimonial, index) => {
+            
                 let img = imageContainer.querySelector(`[data-index="${index}"]`);
                 if (!img) {
                     img = document.createElement('img');

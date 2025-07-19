@@ -452,30 +452,28 @@ function Home() {
 
             <div className="home_counts_div slide_bottom_hidden">
             <div class="container">
-        
-                    <div class="counters">
-                        
-                        <div class="counter customer">
-                        <h2 class="number"><span class="home_counter_value" data-value="24">0</span>k+</h2>
-                        <p class="detail">Successfully Educated</p>
-                        
-                        </div>
-                        
-                        <div class="counter project">
-                        <h2 class="number"><span class="home_counter_value" data-value="95">0</span>%</h2>
-                        <p class="detail">Satisfaction Rate</p>
-                        <hr />
-                        </div>
-                        
-                        <div class="counter employee">
-                        <h2 class="number"><span class="home_counter_value" data-value="24">0</span>k+</h2>
-                        <p class="detail">Students Alumni</p>
-                        <hr />
-                        </div>
-                        
-                       
+                <div class="counters">
+                    
+                    <div class="counter customer">
+                    <h2 class="number"><span class="home_counter_value" data-value="24">0</span>k+</h2>
+                    <p class="detail">Successfully Educated</p>
+                    
                     </div>
-                </div>
+                    
+                    <div class="counter project">
+                    <h2 class="number"><span class="home_counter_value" data-value="95">0</span>%</h2>
+                    <p class="detail">Satisfaction Rate</p>
+                    <hr />
+                    </div>
+                    
+                    <div class="counter employee">
+                    <h2 class="number"><span class="home_counter_value" data-value="24">0</span>k+</h2>
+                    <p class="detail">Students Alumni</p>
+                    <hr />
+                    </div>
+                    
+                    
+                </div></div>
             </div>
             {/* end number counts */}
 
@@ -799,11 +797,12 @@ function Home() {
         </div>
 
     {/* end Gallery */}
+    
 
 
-   
     {/* Testimonials */}
         <div className="testimonials">
+        
             <div className="heading">
                 <h2>What’s Student Say?</h2>
                 <hr />
@@ -812,7 +811,11 @@ function Home() {
             <div className="testimonials_sub">
                 <div class="testimonial-container">
                     <div class="testimonial-grid">
-                        <div class="image-container" id="image-container"></div>
+                        <div class="image-container" id="image-container">
+                            <img src={web_images.gg_1} alt="Akosua Mensah" data-index="0" className="testimonial-image" />
+                            <img src={web_images.gg_2} alt="Akosua Mensah" data-index="1" className="testimonial-image" />
+                            <img src={web_images.gg_3} alt="Akosua Mensah" data-index="2" className="testimonial-image" />
+                        </div>
                         <div class="testimonial-content">
                         <div>
                             <h3 class="name" id="name"></h3>
@@ -820,16 +823,10 @@ function Home() {
                             <p class="quote" id="quote"></p>
                         </div>
                         <div class="arrow-buttons">
-                            <button class="arrow-button prev-button" id="prev-button">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
-                            </svg>
-                            </button>
-                            <button class="arrow-button next-button" id="next-button">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
-                            </svg>
-                            </button>
+                            
+                             <FontAwesomeIcon className="arrow-button" id="prev-button"   icon = {faCaretLeft}/>
+                            <FontAwesomeIcon id="next-button"   className="arrow-button" icon = {faCaretRight}/>
+                           
                         </div>
                         </div>
                     </div>

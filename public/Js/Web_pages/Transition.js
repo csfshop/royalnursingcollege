@@ -1,55 +1,88 @@
 
 // zoom in intersection
 
-const all_zoom_hidden = document.querySelectorAll('.zoom_hidden')
 
-const zoomInObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
+;(
+  function observe_all_zoom(){
+    const all_zoom_hidden = document.querySelectorAll('.zoom_hidden')
+    if (!all_zoom_hidden.length){
+      console.log('re runing')
+      setTimeout(observe_all_zoom,50);
+      
 
-      if (entry.isIntersecting) {
-        entry.target.classList.add('zoom_show')
-        
-        
-      }else{
-        entry.target.classList.remove('zoom_show')
+    }
 
-      }
+    const zoomInObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+          entry.target.classList.add('zoom_show')
+          
+          
+        }else{
+          entry.target.classList.remove('zoom_show')
+
+        }
+      });
+    }, {
+      threshold: 0.1   // fire when 10% of the element is visible
     });
-  }, {
-    threshold: 0.1   // fire when 10% of the element is visible
-  });
 
-all_zoom_hidden.forEach((el)=>{
-    zoomInObserver.observe(el)
+    all_zoom_hidden.forEach((el)=>{
+        zoomInObserver.observe(el)
 })
+    
+  }
+)();
+
+
+
 
 // end zoom in
 
 
 
 
-// rotate y in intersection
+// rotate y in 
 
-const all_rotate_hidden = document.querySelectorAll('.rotate_hidden')
+ ;(
+   function observe_all_rotate(){
 
-const rotateInObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
+    const all_rotate_hidden = document.querySelectorAll('.rotate_hidden')
 
-      if (entry.isIntersecting) {
-        entry.target.classList.add('rotate_show')
-        
-        
-      }else{
-        entry.target.classList.remove('rotate_show')
+      if (!all_rotate_hidden.length){
+        console.log('re runing')
+        setTimeout(observe_all_rotate,50);
+      
+
       }
-    });
-  }, {
-    threshold: 0.1   // fire when 10% of the element is visible
-  });
 
-all_rotate_hidden.forEach((el)=>{
-    rotateInObserver.observe(el)
-})
+      const rotateInObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+          entry.target.classList.add('rotate_show')
+          
+          
+        }else{
+          entry.target.classList.remove('rotate_show')
+        }
+      });
+    }, {
+      threshold: 0.1   // fire when 10% of the element is visible
+    });
+
+  all_rotate_hidden.forEach((el)=>{
+      rotateInObserver.observe(el)
+  })
+      
+    
+   }
+)();
+
+
+
+
 
 // end rotate y in
 
@@ -58,11 +91,6 @@ all_rotate_hidden.forEach((el)=>{
 
 // bounce y in intersection
 
-// ;(
-//   function observe_all_bounce(){
-    
-//   }
-// )();
 
 ;(
   function observe_all_bounce(){
@@ -107,26 +135,42 @@ all_rotate_hidden.forEach((el)=>{
 
 // slide_bottom y in intersection
 
-const all_slide_bottom_hidden = document.querySelectorAll('.slide_bottom_hidden')
 
-const slide_bottomInObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
+;(
+   function observe_all_slide_bottom(){
+      const all_slide_bottom_hidden = document.querySelectorAll('.slide_bottom_hidden')
 
-      if (entry.isIntersecting) {
-        entry.target.classList.add('slide_bottom_show')
-        
-        
-      }else{
-        entry.target.classList.remove('slide_bottom_show')
+      if (!all_slide_bottom_hidden.length){
+        console.log('re runing')
+        setTimeout(observe_all_slide_bottom,50);
+
+    
+
       }
-    });
-  }, {
-    threshold: 0.1   // fire when 10% of the element is visible
-  });
 
-all_slide_bottom_hidden.forEach((el)=>{
-    slide_bottomInObserver.observe(el)
-})
+          const slide_bottomInObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+              entry.target.classList.add('slide_bottom_show')
+              
+              
+            }else{
+              entry.target.classList.remove('slide_bottom_show')
+            }
+          });
+      }, {
+        threshold: 0.1   // fire when 10% of the element is visible
+      });
+
+    all_slide_bottom_hidden.forEach((el)=>{
+        slide_bottomInObserver.observe(el)
+    })
+      
+    
+   }
+)();
+
 
 // end slide bottom
 
@@ -134,52 +178,87 @@ all_slide_bottom_hidden.forEach((el)=>{
 
 // slide_up y in intersection
 
-const all_slide_up_hidden = document.querySelectorAll('.slide_up_hidden')
+// ;(
+//    function observe_all_slide_up(){
+//     const all_slide_up_hidden = document.querySelectorAll('.slide_up_hidden')
 
-const slide_upInObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
+//       if (!all_slide_up_hidden.length){
+//         console.log('re runing')
+//         setTimeout(observe_all_slide_up,50);
+      
 
-      if (entry.isIntersecting) {
-        entry.target.classList.add('slide_up_show')
-        
-        
-      }else{
-        entry.target.classList.remove('slide_up_show')
-      }
-    });
-  }, {
-    threshold: 0.1   // fire when 10% of the element is visible
-  });
+//       }
 
-    all_slide_up_hidden.forEach((el)=>{
-    slide_upInObserver.observe(el)
-})
+
+//       const slide_upInObserver = new IntersectionObserver((entries, observer) => {
+//         entries.forEach(entry => {
+
+//           if (entry.isIntersecting) {
+//             entry.target.classList.add('slide_up_show')
+            
+            
+//           }else{
+//             entry.target.classList.remove('slide_up_show')
+//           }
+//         });
+//       }, {
+//         threshold: 0.1   // fire when 10% of the element is visible
+//       });
+
+//         all_slide_up_hidden.forEach((el)=>{
+//         slide_upInObserver.observe(el)
+//     })
+    
+//    }
+// )();
+
+
+
+
+
+
 
 // end slide up
 
 
 
 // flip y in intersection
+// ;(
+//    function observe_all_flip(){
+//     const all_flip_hidden = document.querySelectorAll('.flip_hidden')
+    
+//       if (!all_flip_hidden.length){
+//         console.log('re runing')
+//         setTimeout(observe_all_flip,50);
+      
+//       }
 
-const all_flip_hidden = document.querySelectorAll('.flip_hidden')
 
-const flipInObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
+//       const flipInObserver = new IntersectionObserver((entries, observer) => {
+//         entries.forEach(entry => {
 
-      if (entry.isIntersecting) {
-        entry.target.classList.add('flip_show')
-        
-        
-      }else{
-        entry.target.classList.remove('flip_show')
-      }
-    });
-  }, {
-    threshold: 0.1   // fire when 10% of the element is visible
-  });
+//           if (entry.isIntersecting) {
+//             entry.target.classList.add('flip_show')
+            
+            
+//           }else{
+//             entry.target.classList.remove('flip_show')
+//           }
+//         });
+//       }, {
+//         threshold: 0.1   // fire when 10% of the element is visible
+//       });
 
-    all_flip_hidden.forEach((el)=>{
-    flipInObserver.observe(el)
-})
+//       all_flip_hidden.forEach((el)=>{
+//       flipInObserver.observe(el)
+//   })
+
+    
+//    }
+// )();
+
+
+
+
 
 // end flip
