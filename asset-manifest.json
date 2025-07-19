@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/royalnursingcollege/static/css/main.16ca9359.css",
-    "main.js": "/royalnursingcollege/static/js/main.21f61aaf.js",
+    "main.css": "/royalnursingcollege/static/css/main.2ab369b9.css",
+    "main.js": "/royalnursingcollege/static/js/main.93b44e8c.js",
     "static/js/453.cb7262fe.chunk.js": "/royalnursingcollege/static/js/453.cb7262fe.chunk.js",
     "static/media/img2.jpg": "/royalnursingcollege/static/media/img2.729092188be312bf013e.jpg",
     "static/media/ms_3.png": "/royalnursingcollege/static/media/ms_3.770eaf623af9eca97cfd.png",
@@ -39,12 +39,12 @@
     "static/media/aa_1.png": "/royalnursingcollege/static/media/aa_1.5956c8c0a369f3b3d567.png",
     "static/media/mj_1.jpg": "/royalnursingcollege/static/media/mj_1.78a1a461095222e2eea5.jpg",
     "index.html": "/royalnursingcollege/index.html",
-    "main.16ca9359.css.map": "/royalnursingcollege/static/css/main.16ca9359.css.map",
-    "main.21f61aaf.js.map": "/royalnursingcollege/static/js/main.21f61aaf.js.map",
+    "main.2ab369b9.css.map": "/royalnursingcollege/static/css/main.2ab369b9.css.map",
+    "main.93b44e8c.js.map": "/royalnursingcollege/static/js/main.93b44e8c.js.map",
     "453.cb7262fe.chunk.js.map": "/royalnursingcollege/static/js/453.cb7262fe.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.16ca9359.css",
-    "static/js/main.21f61aaf.js"
+    "static/css/main.2ab369b9.css",
+    "static/js/main.93b44e8c.js"
   ]
 }
