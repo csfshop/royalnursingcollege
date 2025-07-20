@@ -32,7 +32,7 @@ function About_page() {
 
           <div className="about_banner">
             <div class="image-box" ></div>
-            <div className="banner_content">
+            <div className="banner_content ">
                 <h1>About <span>Royal Nursing College</span> </h1>
                 <p>
                     Empowering students with a curriculum grounded
@@ -52,7 +52,7 @@ function About_page() {
           <div className="aboutp_patners">
             <div className="aboutp_patners_div">
               <section>
-                <div className="aboutp_heading">
+                <div className="aboutp_heading bounce_hidden">
                   <h1><span>Afilliation</span> and <span>Accredited</span> Institution</h1>
                   <hr />
                 </div>
@@ -91,7 +91,7 @@ function About_page() {
             <div className="history_div">
 
 
-              <div className="history_content">
+              <div className="history_content zoom_hidden">
                 <div className="heading">
                   <h1>History of <span>Royal Nursing College</span></h1>
                   <hr />
@@ -121,108 +121,9 @@ function About_page() {
 
 
              <div className="history_images">
-               <div className="images_wheels">
-                  <ul class="wheel">
-                  
-                    <li class="img" data-title="Paris" style={{'--img':" url(/images/bg_1.jpg)"}}>
-                      <div class="hoverable"></div>
-                      <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
-                      <g>
-                        <text fill="currentColor" text-anchor="middle" aria-hidden="true">
-                         
-                          <textPath  href="#circlePath" startOffset="20">Paris</textPath>
-                        </text>
-                      </g>
-                    </svg>
-                    </li>
-                    
-                    <li class="img" data-title="Dubai" style={{'--img':"url(/images/bg_1.jpg)"}}>
-                      <div class="hoverable"></div>
-                      <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
-                      <g>
-                        <text fill="currentColor" text-anchor="middle" aria-hidden="true">
-                          <textPath href="#circlePath" xlinkHref="#circlePath" startOffset="20">Dubai</textPath>
-                        </text>
-                      </g>
-                    </svg>
-                    </li>
-                    
-                    <li class="img" data-title="Tokyo" style={{'--img':" url(/images/bg_1.jpg)"}}>
-                      <div class="hoverable"></div>
-                      <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
-                      <g>
-                        <text fill="currentColor" text-anchor="middle" aria-hidden="true">
-                         
-                          <textPath  href="#circlePath" startOffset="20">Tokyo</textPath>
-                        </text>
-                      </g>
-                    </svg>
-                    </li>
-
-                    <li class="img" data-title="Delhi" style={{'--img':" url(/images/bg_1.jpg)"}}>
-                      <div class="hoverable"></div>
-                      <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
-                      <g>
-                        <text fill="currentColor" text-anchor="middle" aria-hidden="true" >
-                         
-                          <textPath  href="#circlePath" startOffset="20">Delhi</textPath>
-                        </text>
-                      </g>
-                    </svg>
-                    </li>
-                  
-                    <li class="img" data-title="Sydney" style={{'--img':" url(/images/bg_1.jpg)"}}>
-                      <div class="hoverable"></div>
-                      <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
-                      <g>
-                        <text fill="currentColor" text-anchor="middle" aria-hidden="true" >
-                         
-                          <textPath href="#circlePath" xlinkHref="#circlePath" startOffset="20">Dubai</textPath>
-
-                        </text>
-                      </g>
-                    </svg>
-                    </li>
-
-                    
-                    <li class="img" data-title="London" style={{'--img':" url(/images/bg_1.jpg)"}}>
-                      <div class="hoverable"></div>
-                      <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
-                      <g>
-                        <text fill="currentColor"  text-anchor="middle" aria-hidden="true">
-                         
-                          <textPath  href="#circlePath" startOffset="20">London</textPath>
-                        </text>
-                      </g>
-                    </svg>
-                    </li>
-                  
-                    <li class="img" data-title="Rome" style={{'--img':" url(/images/bg_1.jpg)"}}>
-                      <div class="hoverable"></div>
-                      <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
-                      <g>
-                        <text fill="currentColor"  text-anchor="middle" aria-hidden="true">
-                         
-                          <textPath  href="#circlePath" startOffset="20">Rome</textPath>
-                        </text>
-                      </g>
-                    </svg>
-                    </li>
-                    
-                    <li class="img" data-title="New York" style={{'--img':" url(/images/bg_1.jpg)"}}>
-                      <div class="hoverable"></div>
-                      <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
-                      <g>
-                        <text fill="currentColor" text-anchor="middle" aria-hidden="true">
-                         
-                          <textPath  href="#circlePath" startOffset="20">New York</textPath>
-                        </text>
-                      </g>
-                    </svg>
-                    </li>
-
-                  </ul>
-               </div>
+              <div class="container bounce_hidden">
+                  <img src={web_images.gg_9} alt="Изображение"/>
+              </div>
 
               </div> 
             </div>
@@ -235,7 +136,7 @@ function About_page() {
             <div className="mvn_sub">
               
                 <div className="container">
-                    <div className="motto">
+                    <div className="motto zoom_hidden">
                       <h1>Motto:</h1>
                       <div className="motto_qoute">
                         <FontAwesomeIcon className='icon' icon={faQuoteLeft}/>
@@ -247,7 +148,7 @@ function About_page() {
 
                     </div>
                     <div className="row">
-                      <div className="card">
+                      <div className="card slide_bottom_hidden">
                           <div className="info">
                           <div className="sub">Mission Statement</div>
                           <div className="title">
@@ -261,7 +162,7 @@ function About_page() {
                           </div>
                           
                       </div>
-                      <div className="card">
+                      <div className="card slide_bottom_hidden">
                           <div className="info">
                           <div className="sub">Vision Statement</div>
                           <div className="title">
@@ -289,17 +190,17 @@ function About_page() {
         <div className="about_summary">
           <div className="about_summary_div">
 
-            <div className="about_summary_title">
+            <div className="about_summary_title zoom_hidden">
               <h1> Our Core <span>Values</span> </h1>
               <hr />
             </div>
 
            <div className="about_summary_item">
-              <div className="title">
+              <div className="title zoom_hidden">
                 <h1>Empathy</h1>
                 <hr />
               </div>
-             <div className="abt_summary_content">
+             <div className="abt_summary_content bounce_hidden">
                 <h2><span>Empathy</span> at Our College</h2>
                 <p>
                   Empathy is the heartbeat of nursing—more than hearing words, 
@@ -323,17 +224,17 @@ function About_page() {
                 </ul>
             </div>
 
-              <div className="abt_summary_image">
+              <div className="abt_summary_image slide_bottom_hidden">
                    <img class="card-img" src={web_images.gg_7} alt="Team Member 1"/>
               </div>
            </div>
 
              <div className="about_summary_item">
-              <div className="title">
+              <div className="title zoom_hidden">
                 <h1>Professionalism</h1>
                 <hr />
               </div>
-             <div className="abt_summary_content">
+             <div className="abt_summary_content bounce_hidden">
                 <h2><span>Professionalism</span> at Our College</h2>
                 <p>
                   Professionalism is the foundation of trust in nursing—it’s how skill,
@@ -366,7 +267,7 @@ function About_page() {
                 </ul>
             </div>
 
-              <div className="abt_summary_image">
+              <div className="abt_summary_image slide_bottom_hidden">
                    <img class="card-img" src={web_images.gg_12} alt="Team Member 1"/>
               </div>
            </div>
@@ -374,11 +275,11 @@ function About_page() {
 
 
            <div className="about_summary_item">
-              <div className="title">
+              <div className="title zoom_hidden">
                 <h1>Teamwork</h1>
                 <hr />
               </div>
-             <div className="abt_summary_content">
+             <div className="abt_summary_content bounce_hidden">
                 <h2><span>Teamwork</span> at Our College</h2>
                 <p>
                   Teamwork is essential to safe, effective, and compassionate 
@@ -415,7 +316,7 @@ function About_page() {
                
             </div>
 
-              <div className="abt_summary_image">
+              <div className="abt_summary_image slide_bottom_hidden">
                    <img class="card-img" src={web_images.gg_8} alt="Team Member 1"/>
               </div>
            </div>
@@ -434,7 +335,7 @@ function About_page() {
         {/* our team */}
 
           <div className="about_our_team">
-            <div className="teams_slides">
+            <div className="teams_slides slide_bottom_hidden">
              <div className="teams_title">
               <h1>Our Awesome <span>Crew</span></h1>
               <hr />
@@ -444,7 +345,7 @@ function About_page() {
                 <button class="nav-arrow left"><FontAwesomeIcon className='icon' icon={faCaretLeft}/></button>
                 <div class="carousel-track">
                   <div class="card" data-index="0">
-                    <img class="card-img" src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=3687&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Team Member 1"/>
+                    <img class="card-img" src={web_images.gg_2} alt="Team Member 1"/>
                     <div class="card-content">
                       <h3 class="card-name">Emily Kim</h3>
                       <p class="card-role">Founder</p>
@@ -452,7 +353,7 @@ function About_page() {
                     </div>
                   </div>
                   <div class="card" data-index="1">
-                    <img class="card-img" src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Team Member 2"/>
+                    <img class="card-img" src={web_images.gg_3} alt="Team Member 2"/>
                       <div class="card-content">
                         <h3 class="card-name">Michael Steward</h3>
                         <p class="card-role">Creative Director</p>
@@ -460,7 +361,7 @@ function About_page() {
                       </div>
                   </div>
                   <div class="card" data-index="2">
-                    <img class="card-img" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZmVzc2lvbmFsJTIwcGVvcGxlfGVufDB8fDB8fHww" alt="Team Member 3"/>
+                    <img class="card-img" src={web_images.gg_1} alt="Team Member 3"/>
                     <div class="card-content">
                       <h3 class="card-name">Emma Rodriguez</h3>
                       <p class="card-role">Lead Developer</p>
@@ -468,7 +369,7 @@ function About_page() {
                     </div>
                   </div>
                   <div class="card" data-index="3">
-                    <img class="card-img" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cHJvZmVzc2lvbmFsJTIwcGVvcGxlfGVufDB8fDB8fHww" alt="Team Member 4"/>
+                    <img class="card-img" src={web_images.gg_4} alt="Team Member 4"/>
                     <div class="card-content">
                       <h3 class="card-name">Julia Gimmel</h3>
                       <p class="card-role">UX Designer</p>
@@ -476,7 +377,7 @@ function About_page() {
                     </div>
                   </div>
                   <div class="card" data-index="4">
-                    <img class="card-img" src="https://images.unsplash.com/photo-1655249481446-25d575f1c054?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjh8fHByb2Zlc3Npb25hbCUyMHBlb3BsZXxlbnwwfHwwfHx8MA%3D%3D" alt="Team Member 5"/>
+                    <img class="card-img" src={web_images.gg_5} alt="Team Member 5"/>
                     <div class="card-content">
                       <h3 class="card-name">Lisa Anderson</h3>
                       <p class="card-role">Marketing Manager</p>
@@ -484,7 +385,7 @@ function About_page() {
                     </div>
                   </div>
                   <div class="card" data-index="5">
-                    <img class="card-img" src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=3687&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Team Member 6"/>
+                    <img class="card-img" src={web_images.gg_6} alt="Team Member 6"/>
                     <div class="card-content">
                       <h3 class="card-name">James Wilson</h3>
                       <p class="card-role">Product Manager</p>
@@ -518,7 +419,7 @@ function About_page() {
           <div className="pre_profile">
             <div className="pre_profile_div">
               <div class="main-grid">
-                <div class="image-container">
+                <div class="image-container bounce_hidden">
                   <img src="https://ik.imagekit.io/gopichakradhar/assets/gopi.png?updatedAt=1749707575187" alt="Avatar" class="character-img"/>
                   <div class="overlay-panel">
                     <h3>Creative Mind · Scalable Ideas</h3>
@@ -530,7 +431,7 @@ function About_page() {
                   </div>
                 </div>
                 <div class="right-grid">
-                  <div class="orange-box">
+                  <div class="orange-box bounce_hidden">
                     <div className="pre_contact">
                        <h4><FontAwesomeIcon className='icon' icon={faPhoneVolume}/> <span>Call:</span></h4>
                       <p>024-285-8996/055-421-9121</p>
@@ -547,7 +448,7 @@ function About_page() {
                     </div>
                   </div>
                 
-                  <div class="bottom-right">
+                  <div class="bottom-right bounce_hidden">
                     <div class="vertical-line"></div>
                     <div class="text-content">
                       <h1><span class="white">Gopi</span> <span class="orange">Chakradhar </span></h1>
