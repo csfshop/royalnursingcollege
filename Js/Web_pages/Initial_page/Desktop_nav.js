@@ -1,6 +1,8 @@
-
+( function () {
+  
 if (window.scrollY === 0) {
   const navbar = document.getElementById('desktop_nav');
+
   navbar.classList.remove('scrolled');
 
   // const sub_nav = document.getElementById('sub_top_nav');
@@ -23,3 +25,4 @@ window.addEventListener('scroll', () => {
     // sub_nav.classList.remove('scrolled');
   }
 });
+})()

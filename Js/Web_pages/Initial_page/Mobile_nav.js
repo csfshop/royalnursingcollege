@@ -1,4 +1,6 @@
+( function (){
 
+  
 
 var menuopenbtn = document.getElementById("sidebar_open")
 var menulist = document.getElementById("sidebar_div")
@@ -46,3 +48,5 @@ window.addEventListener('scroll', () => {
 
 
 
+
+})()

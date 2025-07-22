@@ -1,4 +1,5 @@
-// our teams
+( function () {
+  // our teams
 
 const teamMembers = [
   { name: "Emily Kim", role: "Founder" },
@@ -153,3 +154,4 @@ updateCarousel(0);
 
 
 // end our teams
+})()
