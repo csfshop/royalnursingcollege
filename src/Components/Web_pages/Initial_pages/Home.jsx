@@ -9,20 +9,39 @@ import {  useNavigate } from 'react-router-dom';
 
 function Home() {
     
-  useEffect(()=>{
-       
-    const script = document.createElement('script')
-    script.src = `${process.env.PUBLIC_URL}/Js/Web_pages/Initial_page/Home.js`
-    script.async = true
-    script.onload = () => console.log('Script loaded successfully')
-    script.onerror = () => console.error('Error loading script:', script.src)
-    document.body.appendChild(script)
+  useEffect(() => {
+    const SCRIPT_ID = 'home-script';
 
-    return () => {
-        document.body.removeChild(script)
+    // Guard: don’t inject twice
+    if (document.getElementById(SCRIPT_ID)) return;
+
+    // Function that creates & appends the script tag
+    const loadScript = () => {
+      const script = document.createElement('script');
+      script.id = SCRIPT_ID;
+      script.src = `${process.env.PUBLIC_URL}/Js/Web_pages/Initial_page/Home.js`;
+      script.async = true;
+      script.onload  = () => console.log('Script home loaded successfully');
+      script.onerror = () => console.error('Error loading home script:', script.src);
+      document.body.appendChild(script);
+    };
+
+    // If DOM is already parsed, run immediately…
+    if (document.readyState === 'interactive' || document.readyState === 'complete') {
+      loadScript();
+
+    // …otherwise wait for the browser’s “DOMContentLoaded” event  
+    } else {
+      window.addEventListener('DOMContentLoaded', loadScript, false);
     }
 
-    },[])
+    // Cleanup: remove listener & script on unmount
+    return () => {
+      window.removeEventListener('DOMContentLoaded', loadScript, false);
+      const existing = document.getElementById(SCRIPT_ID);
+      if (existing) existing.remove();
+    };
+  }, []);
 
     const navigate = useNavigate()
 

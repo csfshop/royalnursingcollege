@@ -11,19 +11,40 @@ import '../../../Css/Web_pages/About.css'
 
 function About_page() {
 
-     useEffect(()=>{
-        const script = document.createElement('script')
-        script.src = `${process.env.PUBLIC_URL}/Js/Web_pages/Initial_page/About.js`
-        script.async = true
-        script.onload = () => console.log('Script loaded successfully')
-        script.onerror = () => console.error('Error loading script:', script.src)
-        document.body.appendChild(script)
+ useEffect(() => {
+    const About_SCRIPT_ID = 'about-script';
 
-        return () => {
-            document.body.removeChild(script)
-        } 
+    // Guard: don’t inject twice
+    if (document.getElementById(About_SCRIPT_ID)) return;
 
-    },[])
+    // Function that creates & appends the script tag
+    const loadScript = () => {
+      const script = document.createElement('script');
+      script.id = About_SCRIPT_ID;
+      script.src = `${process.env.PUBLIC_URL}/Js/Web_pages/Initial_page/About.js`;
+      script.async = true;
+      script.onload  = () => console.log('Script about loaded successfully');
+      script.onerror = () => console.error('Error loading about script:', script.src);
+      document.body.appendChild(script);
+    };
+
+    // If DOM is already parsed, run immediately…
+    if (document.readyState === 'interactive' || document.readyState === 'complete') {
+      loadScript();
+
+    // …otherwise wait for the browser’s “DOMContentLoaded” event  
+    } else {
+      window.addEventListener('DOMContentLoaded', loadScript, false);
+    }
+
+    // Cleanup: remove listener & script on unmount
+    return () => {
+      window.removeEventListener('DOMContentLoaded', loadScript, false);
+      const about_existing = document.getElementById(About_SCRIPT_ID);
+      if (about_existing) about_existing.remove();
+    };
+  }, []);
+
 
     return (
       <div className="about_page">

@@ -7,11 +7,7 @@
     position: relative;
     width: 100%;
     margin-top: 60px;
-    height: 100vh;
-    max-height: 400px;
-    
-   
-   
+    height: 400px; 
 }
 
 .contact_banner .image-box {
@@ -102,6 +98,11 @@
 }
 
 @media (max-width:1100px){
+
+    .contact_banner{
+
+    height: 350px; 
+}
   .contact_banner .banner_content h1{
     font-size: 30px;
    
@@ -131,6 +132,12 @@
     max-width: 700px;
 
 }
+}
+
+@media (max-width:600px){
+    .contact_banner{
+        height: 320px; 
+    }
 }
 @media (max-width:380px){
   .contact_banner .banner_content h1{
