@@ -51,7 +51,7 @@ function Home() {
     }
 
   return (
-  <div className='main_home'>
+    <div className='main_home'>
 
     {/* main slider div */}
     <div className="main_slider_div">
@@ -589,7 +589,7 @@ function Home() {
                                 </div>
                            
                             </div>
-                            <div class="card-body ">
+                            <div class="card-body slide_bottom_hidden">
                                 <h3>Embracing Forward-thinking Methods </h3>
                                 <p>
                                     We integrate simulation labs, digital tools, 

@@ -36,7 +36,7 @@ function Contact_page() {
             {/* map */}
                 <div className="contact_map slide_bottom_hidden">
                     <div className="contact_map_div">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.3910101828596!2d-1.6142603898153478!3d6.722050693245865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdb97a4f6f65da5%3A0xdbe87f913c828317!2sRoyal%20Nursing%20College!5e0!3m2!1sen!2sgh!4v1751938764861!5m2!1sen!2sgh"   allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.3910101828596!2d-1.6142603898153478!3d6.722050693245865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdb97a4f6f65da5%3A0xdbe87f913c828317!2sRoyal%20Nursing%20College!5e0!3m2!1sen!2sgh!4v1751938764861!5m2!1sen!2sgh"   allowFullScreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             {/* endmap */}

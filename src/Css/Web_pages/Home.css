@@ -2027,6 +2027,7 @@ margin-bottom: 0px;
 
 .home_why_second{
   width: 50%;
+ 
 
 }
 
@@ -2045,7 +2046,7 @@ margin-bottom: 0px;
 .home_why_second section .card {
   position: relative;
   z-index: 555;
-  width: 100%;
+  width: 95%;
   display: grid;
   place-content: center;
   place-items: center;
@@ -2053,6 +2054,8 @@ margin-bottom: 0px;
   box-shadow: 0.063em 0.75em 1.563em rgba(0, 0, 0, 0.78);
   border-radius: 2.25rem; 
   min-height:330px ;
+  margin: auto;
+  
  
  
 }
@@ -2060,7 +2063,7 @@ margin-bottom: 0px;
   position: absolute;
   content: "";
   top: 0;
-  width: 100%;
+  width: 95%;
   height: 100%;
   border-radius: 2.25rem;
   z-index: -1;
@@ -2068,6 +2071,8 @@ margin-bottom: 0px;
   -webkit-mask: linear-gradient(white 0 0) padding-box, linear-gradient(white 0 0);
   -webkit-mask-composite: destination-out;
   mask-composite: exclude;
+  margin: auto;
+
 }
 .home_why_second section .card-header {
   position: absolute;

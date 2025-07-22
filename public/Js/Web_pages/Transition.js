@@ -5,12 +5,12 @@
 ;(
   function observe_all_zoom(){
     const all_zoom_hidden = document.querySelectorAll('.zoom_hidden')
-    if (!all_zoom_hidden.length){
-      console.log('re runing')
-      setTimeout(observe_all_zoom,50);
+    // if (!all_zoom_hidden.length){
+    //   console.log('re runing zoom')
+    //   setTimeout(observe_all_zoom,50);
       
 
-    }
+    // }
 
     const zoomInObserver = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
@@ -50,12 +50,12 @@
 
     const all_rotate_hidden = document.querySelectorAll('.rotate_hidden')
 
-      if (!all_rotate_hidden.length){
-        console.log('re runing')
-        setTimeout(observe_all_rotate,50);
+      // if (!all_rotate_hidden.length){
+      //   console.log('re runing rotate y')
+      //   setTimeout(observe_all_rotate,50);
       
 
-      }
+      // }
 
       const rotateInObserver = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
@@ -97,12 +97,12 @@
 
     const all_bounce_hidden = document.querySelectorAll('.bounce_hidden')
 
-    if (!all_bounce_hidden.length){
-      console.log('re runing')
-      setTimeout(observe_all_bounce,50);
+    // if (!all_bounce_hidden.length){
+    //   console.log('re runing bounce')
+    //   setTimeout(observe_all_bounce,50);
       
 
-    }
+    // }
     console.log('done with buonce')
     const bounceInObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
@@ -140,13 +140,13 @@
    function observe_all_slide_bottom(){
       const all_slide_bottom_hidden = document.querySelectorAll('.slide_bottom_hidden')
 
-      if (!all_slide_bottom_hidden.length){
-        console.log('re runing')
-        setTimeout(observe_all_slide_bottom,50);
+      // if (!all_slide_bottom_hidden.length){
+      //   console.log('re runing bottom')
+      //   setTimeout(observe_all_slide_bottom,50);
 
     
 
-      }
+      // }
 
           const slide_bottomInObserver = new IntersectionObserver((entries, observer) => {
           entries.forEach(entry => {
