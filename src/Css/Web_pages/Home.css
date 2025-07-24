@@ -2848,7 +2848,7 @@ padding: 10px 15px;
   gap: 20px;
    grid-template-columns: repeat(3, 1fr);
    
-  
+
 
   
 }
@@ -2886,8 +2886,8 @@ padding: 10px 15px;
 
 .home_image_gallery {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+ 
+  justify-content: center;
   font-family: "Montserrat", Verdana, Geneva, sans-serif;
   line-height: 1.4;
   height: fit-content;
